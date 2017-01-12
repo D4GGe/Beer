@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container-fluid">
+    <!--ko foreach: pubs -->
+    <div class="row">
+        <div class="col-md-12">
+                <h3 data-bind="text: name"></h3>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-inverse table-hover">
+                <thead>
+                    <tr>
+                        <th>Namn</th>
+                        <th>Typ</th>
+                        <th>Bryggeri</th>
+                        <th>ABU</th>
+                        <th>Beskrivning</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: beers ">
+                    <tr>
+                        <th scope="row" data-bind="text: name"></th>
+                        <td data-bind="text: type"></td>
+                        <td data-bind="text: brewery"></td>
+                        <td data-bind="text: alcholPrecentage"></td>
+                        <td data-bind="text: text"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
