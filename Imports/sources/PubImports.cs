@@ -17,6 +17,7 @@ namespace Imports.sources
             ImportBishop("6").Wait();
             ImportBishop("7").Wait();
             ImportBishop("8").Wait();
+            BrewDog.ImportTaps();
           
         }
        public static async Task ImportBishop(string number)
