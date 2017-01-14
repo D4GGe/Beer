@@ -5,16 +5,22 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 using Imports.sources;
+using System.IO;
+using Xfinium.Pdf;
+using Xfinium.Pdf.Content;
+using Xfinium.Pdf.Graphics;
+
 class Program
 {
+
+
+
     static void Main(string[] args)
     {
         
-
-
-     
-        Console.WriteLine(PubImports.importedPubs.ToArray().Length);
+        Console.WriteLine("sadsadasdsadsadsa");
         Console.ReadLine();
+       
     }
 
    

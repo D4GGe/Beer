@@ -12,6 +12,8 @@ namespace Imports.sources
         public static List<Pub> importedPubs = new List<Pub>();
         public static void UpdatePubs()
         {
+            importedPubs.Clear();
+            (new OlRepubliken()).Import();
             ImportBishop("6").Wait();
             ImportBishop("7").Wait();
             ImportBishop("8").Wait();
@@ -49,7 +51,7 @@ namespace Imports.sources
                     }
                     importedPubs.Add(new Pub
                     {
-                        Name = posts.name,
+                        Name = "Bishops Arms "+posts.name,
                         Adress = posts.address,
                         Beers = beers
                     });
