@@ -13,10 +13,10 @@ namespace Imports.sources
         public static void UpdatePubs()
         {
             importedPubs.Clear();
-            (new OlRepubliken()).Import();
             ImportBishop("6").Wait();
             ImportBishop("7").Wait();
             ImportBishop("8").Wait();
+            (new OlRepubliken()).Import();
             BrewDog.ImportTaps();
           
         }
