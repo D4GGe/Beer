@@ -18,7 +18,7 @@ namespace Imports.sources
             ImportBishop("8").Wait();
             (new OlRepubliken()).Import();
             BrewDog.ImportTaps();
-          
+            BrewersBeerBar.ImportTaps();
         }
        public static async Task ImportBishop(string number)
         {
