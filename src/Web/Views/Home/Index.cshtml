@@ -2,7 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="container-fluid">
-    <!--ko foreach: pubs -->
+    <div class="form-group">
+        <input class="form-control input-lg" id="inputlg" data-bind="value: filter, valueUpdate: 'keyup'" type="text" placeholder="Sök">
+    </div>
+     <!--ko foreach: pubs -->
+    <!--ko if: filteredBeers-->
     <div class="row">
         <div class="col-md-12">
                 <h3 data-bind="text: name"></h3>
@@ -20,7 +24,7 @@
                         <th>Beskrivning</th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach: beers ">
+                <tbody data-bind="foreach: filteredBeers ">
                     <tr>
                         <th scope="row" data-bind="text: name"></th>
                         <td data-bind="text: type"></td>
@@ -32,6 +36,7 @@
             </table>
         </div>
     </div>
+    <!-- /ko -->
     <!-- /ko -->
     
 </div>
