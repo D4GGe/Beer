@@ -20,16 +20,14 @@ namespace Web.Controllers
             return PubImports.importedPubs;
         }
 
-        
-    }
-    public class UpdateBeers : Controller
-    {
         [HttpGet]
-        public string Get()
+        [Route("Update")]
+        public string Update()
         {
             PubImports.UpdatePubs();
             return "true";
         }
     }
+    
 
 }

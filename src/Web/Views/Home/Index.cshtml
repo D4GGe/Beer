@@ -2,9 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="container-fluid">
-    <div class="form-group">
-        <input class="form-control input-lg" id="inputlg" data-bind="value: filter, valueUpdate: 'keyup'" type="text" placeholder="Sök">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input class="form-control input-lg" id="inputlg" data-bind="value: filter, valueUpdate: 'keyup'" type="text" placeholder="Sök">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-success" data-bind="click: update">Uppdate</button>
+        </div>
     </div>
+   
+    
      <!--ko foreach: pubs -->
     <!--ko if: filteredBeers-->
     <div class="row">
