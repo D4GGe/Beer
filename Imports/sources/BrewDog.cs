@@ -77,7 +77,7 @@ namespace Imports.sources
                 {
                     Name = tapname,
                     Brewery = brewery,
-                    alcholPrecentage = tapabv
+                    AlcholPrecentage = tapabv
                 };
                 taplist.Add(temptap);
             }

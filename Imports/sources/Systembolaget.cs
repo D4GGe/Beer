@@ -28,7 +28,7 @@ namespace Imports.sources
                 try
                 {
                     client.BaseAddress = new Uri("https://www.systembolaget.se/");
-                    var response = await client.GetAsync($"/fakta-och-nyheter/nyheter-i-sortimentet/lanseringar/");
+                    var response = await client.GetAsync("/fakta-och-nyheter/nyheter-i-sortimentet/lanseringar/");
                     response.EnsureSuccessStatusCode();
 
                     html = await response.Content.ReadAsStringAsync();
@@ -83,6 +83,7 @@ namespace Imports.sources
                             {
                                 Name = ws.Cells[row, 2].Text,
                                 Brewery = ws.Cells[row, 4].Text,
+                                Country = ws.Cells[row, 6].Text,
                                 Price = (int)Math.Round(double.Parse(ws.Cells[row, 7].Text))
                             };
                             beerlist.Add(tempbeer);

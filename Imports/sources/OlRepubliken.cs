@@ -66,7 +66,7 @@ namespace Imports.sources
                     beerList.Add(new Beer
                     {
                         Price = int.Parse(parsed[0]),
-                        alcholPrecentage = double.Parse(parsed[2]),
+                        AlcholPrecentage = double.Parse(parsed[2]),
                         Name = name,
                         Text = line2,
                         Brewery = brew

@@ -65,7 +65,7 @@ namespace Imports.sources
                             Brewery = brewery,
                             Type = type,
                             Price = price,
-                            alcholPrecentage = abv
+                            AlcholPrecentage = abv
                         };
                         taplist.Add(temptap);
                     }

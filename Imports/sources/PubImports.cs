@@ -46,7 +46,7 @@ namespace Imports.sources
                             Name = Bishbeer.title,
                             Text = Bishbeer.description,
                             Type = Bishbeer.type,
-                            alcholPrecentage = Bishbeer.alcholPrecentage,
+                            AlcholPrecentage = Bishbeer.alcholPrecentage,
                             Brewery = Bishbeer.brewery
                         };
                         beers.Add(tempBeer);

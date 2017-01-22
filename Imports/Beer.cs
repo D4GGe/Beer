@@ -12,7 +12,7 @@ namespace Imports
         public int Price { get; set; }
         public string Text { get; set; }
         public string Brewery { get; set; }
-        public double alcholPrecentage { get; set; }
-        public string country { get; set; }
+        public double AlcholPrecentage { get; set; }
+        public string Country { get; set; }
     }
 }
