@@ -12,6 +12,8 @@ namespace Web
         public Startup(IHostingEnvironment env)
         {
             PubImports.UpdatePubs();
+            Systembolaget.ImportReleases();
+
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)

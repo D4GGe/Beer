@@ -19,7 +19,6 @@ namespace Imports.sources
             (new OlRepubliken()).Import();
             BrewDog.ImportTaps();
             BrewersBeerBar.ImportTaps();
-            Systembolaget.ImportReleases();
         }
        public static async Task ImportBishop(string number)
         {
