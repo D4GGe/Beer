@@ -13,5 +13,6 @@ namespace Imports
         public string Text { get; set; }
         public string Brewery { get; set; }
         public double alcholPrecentage { get; set; }
+        public string country { get; set; }
     }
 }

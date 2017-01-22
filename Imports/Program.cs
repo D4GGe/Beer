@@ -12,16 +12,8 @@ using Xfinium.Pdf.Graphics;
 
 class Program
 {
-
-
-
     static void Main(string[] args)
     {
         
-        Console.WriteLine("sadsadasdsadsadsa");
-        Console.ReadLine();
-       
     }
-
-   
 }
