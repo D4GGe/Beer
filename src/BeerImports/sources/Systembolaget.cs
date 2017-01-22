@@ -7,7 +7,7 @@ using OfficeOpenXml;
 using System.IO;
 using System.Globalization;
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     public class SystembolagetRelease
     {

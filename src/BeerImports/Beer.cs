@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Imports
+namespace BeerImports
 {
     public enum BeerType {Stout,ImperialStout, Lager, IPA , PA,WheatBeer,SouerAle,RedAle,Belgian}
     public class Beer

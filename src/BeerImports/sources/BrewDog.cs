@@ -5,7 +5,7 @@ using System.Net.Http;
 using HtmlAgilityPack;
 using System.Threading.Tasks;
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     class BrewDog
     {

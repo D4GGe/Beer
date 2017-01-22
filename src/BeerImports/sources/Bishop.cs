@@ -4,7 +4,7 @@ using System.Text;
 using System.Net.Http;
 
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     public class BishBeerType
     {

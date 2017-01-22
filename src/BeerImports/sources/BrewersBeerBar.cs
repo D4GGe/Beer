@@ -4,7 +4,7 @@ using HtmlAgilityPack;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     class BrewersBeerBar
     {

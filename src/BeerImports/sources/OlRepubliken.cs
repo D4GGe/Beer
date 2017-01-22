@@ -6,7 +6,7 @@ using System.Text;
 using Xfinium.Pdf;
 using Xfinium.Pdf.Content;
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     class OlRepubliken
     {

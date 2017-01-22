@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Imports.sources
+namespace BeerImports.sources
 {
     public static class PubImports
     {
