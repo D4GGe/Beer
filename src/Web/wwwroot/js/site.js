@@ -27,7 +27,11 @@
             });
 
         })
-        
+        self.update = function () {
+            $.get("api/beers/update", function (data) {
+                location.reload();
+            });
+        }
         self.pubs = ko.observableArray(data);
     }
 });
