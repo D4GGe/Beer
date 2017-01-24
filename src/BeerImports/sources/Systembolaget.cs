@@ -68,7 +68,7 @@ namespace BeerImports.sources
             {
                 using (var client = new HttpClient())
                 {
-                    string uri = "http://www.systembolaget.se" + releasepath;
+                    string uri = "https://www.systembolaget.se" + releasepath;
                     var bytes = client.GetByteArrayAsync(uri).Result;
                     var xlsxstream = new MemoryStream(bytes, true);
                     ExcelPackage pck = new ExcelPackage(xlsxstream);
