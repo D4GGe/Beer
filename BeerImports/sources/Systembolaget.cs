@@ -84,7 +84,7 @@ namespace BeerImports.sources
                                 Name = ws.Cells[row, 2].Text,
                                 Brewery = ws.Cells[row, 4].Text,
                                 Country = ws.Cells[row, 6].Text,
-                                Price = (int)Math.Round(double.Parse(ws.Cells[row, 7].Text))
+                                Price = (int)Math.Round(double.Parse(ws.Cells[row, 7].Text,new CultureInfo("en-US")))
                             };
                             beerlist.Add(tempbeer);
                         }

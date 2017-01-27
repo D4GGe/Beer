@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BeerImports.sources;
+
 
 namespace BeerImports
 {
@@ -9,6 +11,9 @@ namespace BeerImports
     {
         public static void Main(string[] args)
         {
+            PubImports.UpdatePubs();
+            Systembolaget.ImportReleases();
+            Console.Write("hej");
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using Xfinium.Pdf;
 using Xfinium.Pdf.Content;
-
+using System.Globalization;
 namespace BeerImports.sources
 {
     class OlRepubliken
@@ -63,10 +63,12 @@ namespace BeerImports.sources
                         name = name.Substring(0, name.LastIndexOf('-')).Trim();
                         
                     }
+                  
+                   
                     beerList.Add(new Beer
                     {
-                        Price = int.Parse(parsed[0]),
-                        AlcholPrecentage = double.Parse(parsed[2]),
+                        Price = int.Parse(parsed[0],new CultureInfo("en-US")),
+                        AlcholPrecentage = Double.Parse(parsed[2],new CultureInfo("en-US")),
                         Name = name,
                         Text = line2,
                         Brewery = brew

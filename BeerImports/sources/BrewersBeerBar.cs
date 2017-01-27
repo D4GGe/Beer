@@ -3,7 +3,7 @@ using System.Net.Http;
 using HtmlAgilityPack;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-
+using System.Globalization;
 namespace BeerImports.sources
 {
     class BrewersBeerBar
@@ -55,7 +55,7 @@ namespace BeerImports.sources
                         string typeabv = strings[2].Trim();
                         string type = typeabv.Substring(0, typeabv.LastIndexOf(' '));
                         string sabv = typeabv.Substring(typeabv.LastIndexOf('(')+1, typeabv.LastIndexOf(')')-typeabv.LastIndexOf('(')-2);
-                        double abv = double.Parse(sabv.Replace(',', '.'));
+                        double abv = double.Parse(sabv.Replace(',', '.'),new CultureInfo("en-US"));
                         string sprice = priceHTML.InnerText;
                         int price = int.Parse(sprice.Substring(sprice.LastIndexOf(" ")+1));
 

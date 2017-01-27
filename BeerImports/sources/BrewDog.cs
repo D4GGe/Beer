@@ -4,7 +4,7 @@ using System.Text;
 using System.Net.Http;
 using HtmlAgilityPack;
 using System.Threading.Tasks;
-
+using System.Globalization;
 namespace BeerImports.sources
 {
     class BrewDog
@@ -61,7 +61,7 @@ namespace BeerImports.sources
                 double tapabv = 0;
                 if (tap.Contains("%"))
                 {
-                    tapabv = double.Parse(tap.Substring(splitpos + 1, tap.Length - 2 - splitpos).Replace(",", "."));
+                    tapabv = double.Parse(tap.Substring(splitpos + 1, tap.Length - 2 - splitpos).Replace(",", "."),new CultureInfo("en-US"));
                 }
 
                 string[] breweryandname = sbreweryandname.Split(new string[] { " - " }, StringSplitOptions.None);
