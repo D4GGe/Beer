@@ -11,9 +11,7 @@ namespace BeerImports
     {
         public static void Main(string[] args)
         {
-            PubImports.UpdatePubs();
-            Systembolaget.ImportReleases();
-            Console.Write("hej");
+
         }
     }
 }
