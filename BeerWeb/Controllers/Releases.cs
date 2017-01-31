@@ -15,12 +15,10 @@ namespace Web.Controllers
         {
             return Systembolaget.releases;
         }
-    }
 
-    public class UpdateReleases : Controller
-    {
         [HttpGet]
-        public string Get()
+        [Route("Update")]
+        public string Update()
         {
             Systembolaget.ImportReleases();
             return "true";
