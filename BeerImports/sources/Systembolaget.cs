@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Globalization;
+using System.IO;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Collections.Generic;
 using OfficeOpenXml;
-using System.IO;
-using System.Globalization;
 
 namespace BeerImports.sources
 {
@@ -79,12 +80,24 @@ namespace BeerImports.sources
                     {
                         if (ws.Cells[row, 5].Text == "ÖL MM")
                         {
+                            string sprice = ws.Cells[row, 7].Text;
+                            string nameabv = ws.Cells[row, 2].Text;
+
+                            string pattern = @"[\d\.\,]+%";
+                            Regex rgx = new Regex(pattern);
+                            Match match = rgx.Match(nameabv);
+
+                            string sabv = match.Value.Replace(',','.');
+                            double abv = double.Parse(sabv.Remove(sabv.Length-1), new CultureInfo("en-US"));
+                            string beername = nameabv.Substring(0,match.Index-1);
+
                             var tempbeer = new Beer
                             {
-                                Name = ws.Cells[row, 2].Text,
+                                Name = beername,
+                                AlcholPrecentage = abv,
                                 Brewery = ws.Cells[row, 4].Text,
                                 Country = ws.Cells[row, 6].Text,
-                                Price = (int)Math.Round(double.Parse(ws.Cells[row, 7].Text,new CultureInfo("en-US")))
+                                Price = (int)Math.Round(double.Parse(sprice, new CultureInfo("en-US")))
                             };
                             beerlist.Add(tempbeer);
                         }
