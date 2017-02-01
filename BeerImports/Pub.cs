@@ -9,7 +9,6 @@ namespace BeerImports
         public string Name { get; set; }
         public string Adress { get; set; }
         public List<Beer> Beers { get; set; } 
-
-
+        public int id { get; set; }
     }
 }
