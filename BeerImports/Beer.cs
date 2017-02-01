@@ -14,5 +14,7 @@ namespace BeerImports
         public string Brewery { get; set; }
         public double AlcholPrecentage { get; set; }
         public string Country { get; set; }
+        public DateTime Added {get; set;}
+        public DateTime Removed {get; set;}
     }
 }
