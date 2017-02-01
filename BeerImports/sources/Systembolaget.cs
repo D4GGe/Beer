@@ -43,6 +43,7 @@ namespace BeerImports.sources
 
         public static void ImportReleases()
         {
+            releases.Clear();
             DownloadHtml().Wait();
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(html);
